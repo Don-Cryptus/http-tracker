@@ -17,11 +17,12 @@ const resHeaders = httpTracker.isFF
 const errorHeaders = ['extraHeaders'];
 const r = httpTracker.browser.webRequest;
 
-
+// !IMPORTANT
 r.onCompleted.addListener(
   function (details) {
     details.callerName = 'onCompleted';
     details.requestIdEnhanced = details.requestId;
+    console.log(details);
     eventTracker.logRequestDetails(details);
   },
   trackUrls,
