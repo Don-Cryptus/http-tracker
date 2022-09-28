@@ -15,14 +15,6 @@ const r = httpTracker.browser.webRequest;
 
 
 
-r.onAuthRequired.addListener(
-  function(details) {
-    details.callerName = "onAuthRequired";
-    details.requestIdEnhanced = details.requestId;
-    eventTracker.logRequestDetails(details);
-  }, trackUrls, resHeaders
-);
-
 r.onBeforeRedirect.addListener(
   function(details) {
     details.callerName = "onBeforeRedirect";
