@@ -1,5 +1,3 @@
-console.log(1);
-
 let eventTracker = (function () {
   let addedRequestId = [];
   let allRequestHeaders = new Map();
