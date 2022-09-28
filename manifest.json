@@ -5,7 +5,7 @@
   "name": "HTTP-TRACKER",
   "permissions": ["storage", "webRequest", "tabs", "cookies"],
   "host_permissions": ["*://*/*"],
-  "version": "2.2.6",
+  "version": "1.0.0",
   "options_ui": {
     "page": "/src/html/http-tracker.html",
     "open_in_tab": true
