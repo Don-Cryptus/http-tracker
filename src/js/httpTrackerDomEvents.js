@@ -9,13 +9,7 @@ const resHeaders = httpTracker.isFF ? ["responseHeaders"] : ["responseHeaders", 
 const errorHeaders = ["extraHeaders"];
 const r = httpTracker.browser.webRequest;
 
-r.onBeforeRequest.addListener(
-  function(details) {
-    details.callerName = "onBeforeRequest";
-    details.requestIdEnhanced = details.requestId;
-    eventTracker.logRequestDetails(details);
-  }, trackUrls, reqBodyHeaders
-);
+
 
 r.onBeforeSendHeaders.addListener(
   function(details) {
