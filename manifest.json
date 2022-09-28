@@ -1,0 +1,25 @@
+{
+  "author": "Venu Madhav",
+
+  "description": "Inspect HTTP request headers, cookies, data, response Headers, cookies and add/modify request headers before sending requests",
+  "manifest_version": 3,
+  "name": "HTTP-TRACKER",
+  "permissions": ["storage", "webRequest", "tabs", "cookies"],
+  "host_permissions": ["*://*/*"],
+  "version": "2.2.6",
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+1"
+      },
+      "description": "Open HTTP-TRACKER if not opened, or bring to front if already opened"
+    }
+  },
+  "options_ui": {
+    "page": "/src/html/options.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "320": "/src/assets/icon_320px.png"
+  }
+}
