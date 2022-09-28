@@ -14,13 +14,6 @@ const r = httpTracker.browser.webRequest;
 
 
 
-r.onHeadersReceived.addListener(
-  function(details) {
-    details.callerName = "onHeadersReceived";
-    details.requestIdEnhanced = details.requestId;
-    eventTracker.logRequestDetails(details);
-  }, trackUrls, resHeaders
-);
 
 r.onAuthRequired.addListener(
   function(details) {
