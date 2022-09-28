@@ -17,15 +17,6 @@ const resHeaders = httpTracker.isFF
 const errorHeaders = ['extraHeaders'];
 const r = httpTracker.browser.webRequest;
 
-r.onResponseStarted.addListener(
-  function (details) {
-    details.callerName = 'onResponseStarted';
-    details.requestIdEnhanced = details.requestId;
-    eventTracker.logRequestDetails(details);
-  },
-  trackUrls,
-  resHeaders
-);
 
 r.onCompleted.addListener(
   function (details) {
