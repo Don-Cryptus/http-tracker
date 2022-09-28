@@ -13,13 +13,6 @@ const r = httpTracker.browser.webRequest;
 
 
 
-r.onSendHeaders.addListener(
-  function(details) {
-    details.callerName = "onSendHeaders";
-    details.requestIdEnhanced = details.requestId;
-    eventTracker.logRequestDetails(details);
-  }, trackUrls, reqHeaders
-);
 
 r.onHeadersReceived.addListener(
   function(details) {
