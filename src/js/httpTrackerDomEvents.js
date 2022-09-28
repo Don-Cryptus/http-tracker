@@ -11,18 +11,7 @@ const r = httpTracker.browser.webRequest;
 
 
 
-r.onBeforeSendHeaders.addListener(
-  function(details) {
-    details.callerName = "onBeforeSendHeaders";
-    details.requestIdEnhanced = details.requestId;
-    addModifyRequestHeaders(details);
-    eventTracker.logRequestDetails(details);
-    if (blockRequests(details)) {
-      return { cancel: true };
-    }
-    return { requestHeaders: details.requestHeaders };
-  }, trackUrls, reqHeadersBlocking
-);
+
 
 r.onSendHeaders.addListener(
   function(details) {
