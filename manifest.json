@@ -3,7 +3,7 @@
   "description": "Inspect HTTP requests",
   "manifest_version": 3,
   "name": "HTTP-TRACKER",
-  "permissions": ["storage", "webRequest", "tabs", "cookies"],
+  "permissions": ["storage", "webRequest"],
   "host_permissions": ["*://*/*"],
   "version": "1.0.0",
   "options_ui": {
